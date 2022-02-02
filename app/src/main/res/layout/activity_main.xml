@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview_sound_recorder_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound Recorder"
+        android:layout_centerHorizontal="true"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="32dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="15dp">
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/showtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="محل نمایش متن"
+        android:textAlignment="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_play_arrow_24"
+                android:text="شروع" />
+
+            <ImageButton
+                android:layout_weight="1"
+                android:id="@+id/pause_btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_pause_24"
+                android:text="مکث" />
+            <ImageButton
+                android:text="توقف"
+                android:layout_weight="1"
+                android:id="@+id/stop_btn_play"
+                android:src="@drawable/ic_baseline_stop_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:src="@drawable/ic_baseline_next_plan_24"
+                android:id="@+id/seekto_btn_play"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="پرش به ثانیه ۲۰" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="00 sec" />
+
+            <SeekBar
+
+                android:id="@+id/seekBar"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="10dp"
+                android:id="@+id/max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00 min" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/button_start_recording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="32dp"
+        android:layout_centerVertical="true"/>
+
+
+
+    <ImageButton
+        android:src="@drawable/ic_baseline_stop_24"
+        android:id="@+id/button_stop_recording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="32dp"/>
+</RelativeLayout>
